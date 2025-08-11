@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Student Registration</h1>
+
+    <form id="regForm" autocomplete="off">
+      <label for="studentId">Student ID (unique)</label>
+      <input id="studentId" name="studentId" required placeholder="e.g. S2025-001" />
+
+      <label for="fullName">Full name</label>
+      <input id="fullName" name="fullName" required placeholder="Jane Doe" />
+
+      <div class="row">
+        <div>
+          <label for="email">Email (unique)</label>
+          <input id="email" name="email" type="email" required placeholder="jane@example.com" />
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label for="course">Course</label>
+          <select id="course" name="course">
+            <option value="Computer Science">Computer Science</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Physics">Physics</option>
+            <option value="Business">Business</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="dob">Date of birth</label>
+          <input id="dob" name="dob" type="date" />
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button type="submit">Register student</button>
+        <button id="clearBtn" type="button" class="btn-secondary">Clear all</button>
+      </div>
+
+      <p id="feedback" class="small"></p>
+    </form>
+
+    <section class="list">
+      <strong>Registered students</strong>
+      <div id="studentsList" class="small"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
