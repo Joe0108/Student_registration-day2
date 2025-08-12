@@ -1,64 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student Registration</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <main class="card">
-    <h1>Student Registration</h1>
-
-    <form id="regForm" autocomplete="off">
-      <label for="studentId">Student ID (unique)</label>
-      <input id="studentId" name="studentId" required placeholder="e.g. S2025-001" />
-
-      <label for="fullName">Full name</label>
-      <input id="fullName" name="fullName" required placeholder="Jane Doe" />
-
-      <div class="row">
-        <div>
-          <label for="email">Email (unique)</label>
-          <input id="email" name="email" type="email" required placeholder="jane@example.com" />
-        </div>
-        <div>
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" />
-        </div>
+  <div class="container">
+    <h2>Student Registration</h2>
+    <form id="registrationForm">
+      <div class="input-group">
+        <i class="fa fa-user"></i>
+        <input type="text" name="name" required>
+        <label>Full Name</label>
       </div>
 
-      <div class="row">
-        <div>
-          <label for="course">Course</label>
-          <select id="course" name="course">
-            <option value="Computer Science">Computer Science</option>
-            <option value="Mathematics">Mathematics</option>
-            <option value="Physics">Physics</option>
-            <option value="Business">Business</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-        <div>
-          <label for="dob">Date of birth</label>
-          <input id="dob" name="dob" type="date" />
-        </div>
+      <div class="input-group">
+        <i class="fa fa-envelope"></i>
+        <input type="email" name="email" required>
+        <label>Email</label>
       </div>
 
-      <div class="buttons">
-        <button type="submit">Register student</button>
-        <button id="clearBtn" type="button" class="btn-secondary">Clear all</button>
+      <div class="input-group">
+        <i class="fa fa-phone"></i>
+        <input type="tel" name="mobile" pattern="[0-9]{10}" maxlength="10" required>
+        <label>Mobile Number</label>
       </div>
 
-      <p id="feedback" class="small"></p>
+      <div class="input-group">
+        <i class="fa fa-book"></i>
+        <select name="course" required>
+          <option value="" disabled selected></option>
+          <option>Engineering</option>
+          <option>Science</option>
+          <option>Commerce</option>
+          <option>Arts</option>
+        </select>
+        <label>Course</label>
+      </div>
+
+      <div class="input-group">
+        <i class="fa fa-building"></i>
+        <input type="text" name="department" required>
+        <label>Department</label>
+      </div>
+
+      <div class="input-group">
+        <i class="fa fa-calendar"></i>
+        <select name="year" required>
+          <option value="" disabled selected></option>
+          <option>1st Year</option>
+          <option>2nd Year</option>
+          <option>3rd Year</option>
+          <option>4th Year</option>
+        </select>
+        <label>Year Pursuing</label>
+      </div>
+
+      <button type="submit">Register</button>
     </form>
-
-    <section class="list">
-      <strong>Registered students</strong>
-      <div id="studentsList" class="small"></div>
-    </section>
-  </main>
-
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
