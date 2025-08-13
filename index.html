@@ -1,67 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Student Registration</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Profile Cards</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h2>Student Registration</h2>
-    <form id="registrationForm">
-      <div class="input-group">
-        <i class="fa fa-user"></i>
-        <input type="text" name="name" required>
-        <label>Full Name</label>
-      </div>
+    <h1>Interactive Profile Cards</h1>
+    <button id="addProfileBtn">Add Profile</button>
+    <div id="cardContainer" class="card-container"></div>
 
-      <div class="input-group">
-        <i class="fa fa-envelope"></i>
-        <input type="email" name="email" required>
-        <label>Email</label>
-      </div>
-
-      <div class="input-group">
-        <i class="fa fa-phone"></i>
-        <input type="tel" name="mobile" pattern="[0-9]{10}" maxlength="10" required>
-        <label>Mobile Number</label>
-      </div>
-
-      <div class="input-group">
-        <i class="fa fa-book"></i>
-        <select name="course" required>
-          <option value="" disabled selected></option>
-          <option>Engineering</option>
-          <option>Science</option>
-          <option>Commerce</option>
-          <option>Arts</option>
-        </select>
-        <label>Course</label>
-      </div>
-
-      <div class="input-group">
-        <i class="fa fa-building"></i>
-        <input type="text" name="department" required>
-        <label>Department</label>
-      </div>
-
-      <div class="input-group">
-        <i class="fa fa-calendar"></i>
-        <select name="year" required>
-          <option value="" disabled selected></option>
-          <option>1st Year</option>
-          <option>2nd Year</option>
-          <option>3rd Year</option>
-          <option>4th Year</option>
-        </select>
-        <label>Year Pursuing</label>
-      </div>
-
-      <button type="submit">Register</button>
-    </form>
-  </div>
-  <script src="script.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
